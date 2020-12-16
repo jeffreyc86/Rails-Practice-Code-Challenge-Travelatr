@@ -1,0 +1,7 @@
+<h1><%= @post.title %></h1>
+
+<h2>Authored by :<%= link_to @post.blogger.name, blogger_path(@post.blogger)%></h2>
+
+<h3>This post was written about beautiful <%= link_to @post.destination.name, destination_path(@post.destination) %> </h3>
+
+<%= button_to "Like Post", like_post_path(@post), method: :patch %>
